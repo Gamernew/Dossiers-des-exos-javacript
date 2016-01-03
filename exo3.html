@@ -1,0 +1,26 @@
+<!Doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <script>
+
+    var colours = new Object();
+    colours.red = "#FF0000";
+    colours["green"] = "#00FF00";
+    colours.blue = "#0000FF";
+    window.alert(colours.red);
+    window.alert(colours['green']);
+    window.alert(colours.blue);
+
+    for (var i in colours) {
+      window.alert(i);
+    }
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!Doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>name</th><td id="name"></td>
+      </tr>
+      <tr>
+        <th>quest</th><td id="quest"></td>
+      </tr>
+      <tr>
+        <th>favorite colour</th><td id="colour"></td>
+      </tr>
+    </table>
+    <script language='javascript'>
+      var name = window.prompt("What is your name ?");
+        document.getElementById('name').innerHTML = name;
+      var quest = window.prompt('What is the quest ?');
+        if (quest == "to seek for holy grail") {
+          document.getElementById('quest').innerHTML = quest;
+        }
+        else {
+          document.getElementById('quest').innerHTML = "<span style=\"color: red;\">" + quest + "</span>";
+          window.alert("arrgh");
+        }
+      var favorite_colour = window.prompt("Your colour favorite ?");
+        document.getElementById('colour').innerHTML = favorite_colour;
+      </script>
+
+  </body>
+</html>

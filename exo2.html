@@ -1,0 +1,59 @@
+<!Doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <table>
+    <tr>
+      <th>name: </th>
+      <td id="name"></td>
+    </tr>
+    <th> the game </th>
+    <td id="quest"></td>
+    <tr>
+      <th> color </th>
+      <td id="color"></td>
+    </tr>
+    <tr>
+      <th>Formateur</th>
+      <td id="formateur"></td>
+    </tr>
+  </table>
+  <label>Nom</label>
+  <input id="inputName" type="text">
+  <label>Quest</label>
+  <input id="inputQuest" type="text">
+  <label>Color</label>
+  <input id="inputColor" type="text">
+  <button onclick="javascript:ask();">Ask Me</button>
+  <script>
+    function insertText(domid, text, color = "pink") {
+      document.getElementById(domid).style = "color: " + color;
+      document.getElementById(domid).innerHTML = text;
+    }
+
+    function ask() {
+      var name = document.getElementById("inputName").value;
+      document.getElementById("name").innerHTML = name;
+      var quest = document.getElementById("inputQuest").value;
+      document.getElementById("quest").innerHTML = quest;
+      var color = document.getElementById("inputColor").value;
+      switch (color) {
+        case "red":
+        case "blue":
+        case "yellow":
+        case "brown":
+          insertText("color", color, color);
+          break;
+        default:
+          insertText("color", color);
+          break;
+      }
+    }
+  </script>
+</body>
+
+</html>

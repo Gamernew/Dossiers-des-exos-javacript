@@ -1,0 +1,27 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<center>
+  <button class="bouton" onclick="myFunction()">WHO IS THE ELU ?</button>
+</center>
+<center>
+  <p id="The_elu"></p>
+</center>
+<script>
+  function myFunction() {
+    var elu = ["BULTEZ Jordan", "BRUCHET Daniel", "CAPRON Axel", "CAUVEZ Thimoty", "DELISSE Manon", "DELPIERRE Michel", "FLORE Antoine", "FONTAINE François", "GIACCO Raphael", "GROUX Baptiste", "HURBAIN Jessy", "MACIEJEWSKI Jessica", "MARTINS Julie",
+      "MATEYAK Paul", "MONSERGENT François", "POURRIOT Quentin", "PROVO Kilian", "SCRUFARI Pietro", "TOMCZAK Kévin", "TOURNEUR Tristan", "VERGNE Victor", "VINCENT Simon", "ZAREMBA Victor", "LI Jin Hao"
+    ];
+    var randomValue = elu[Math.floor(elu.length * Math.random())];
+    if (document.getElementById("The_elu").innerHTML == randomValue) {
+      document.getElementById("The_elu").innerHTML = " pass";
+    } else {
+      document.getElementById("The_elu").innerHTML = randomValue;
+    }
+  }
+</script>
+</body>
+</html>
